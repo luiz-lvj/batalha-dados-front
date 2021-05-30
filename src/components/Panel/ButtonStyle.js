@@ -11,4 +11,4 @@ const ButtonStyle = styled.button`
     color: #000000;
 `;
 
-export default ButtonStyle
+export default ButtonStyle;

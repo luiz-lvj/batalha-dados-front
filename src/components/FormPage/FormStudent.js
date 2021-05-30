@@ -1,37 +1,47 @@
 import styled from 'styled-components';
 import HeaderForm from './HeaderForm';
 import FormStyle, { FormInputs, Divider } from './FormStyle';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import SubjectsContext from '../contexts/SubjectsContext';
+import BottomForm from './BottomForm';
 
 export default function FormStudent(){
-    const titleHeader = "Você está prestes a cadastrar um aluno";
-    const textHeader = "Preencha o Formulário de Inscrição";
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [level, setLevel] = useState("");
+    const [registration, setRegistration] = useState("");
+
     return(
         <FormPageStyle>
             <HeaderForm/>
             <FormStyle>
                 <h2>Você está prestes a cadastrar um aluno</h2>
-                <p>O primeiro passo é preencher o formulário de inscrição</p>
+                <h4>O primeiro passo é preencher o formulário de inscrição</h4>
                 <FormInputs>
                     <h3>Dados do aluno</h3>
                     <Divider/>
                     <p>Nome completo do aluno</p>
-                    <input type="text" placeholder="Digite o nome do aluno"></input>
+                    <input type="text" placeholder="Digite o nome do aluno"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                    ></input>
 
                     <p>Email do aluno</p>
-                    <input type="email" placeholder="Digite o email do aluno"></input>
+                    <input type="email" placeholder="Digite o email do aluno"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}></input>
 
                     <p>Série do aluno</p>
-                    <input type="text" placeholder="Digite a série do aluno"></input>
+                    <input type="text" placeholder="Digite a série do aluno"
+                    value={level}
+                    onChange={e => setLevel(e.target.value)}></input>
 
                     <p>Número de matrícula do aluno (apenas números)</p>
-                    <input type="text" placeholder="Digite o número de matrícula do aluno"></input>
-
-                    <h3>Quais disciplinas deseja cadastrar seu aluno</h3>
-                    <Divider/>
-                    <SelectSubject/>
+                    <input type="text" placeholder="Digite o número de matrícula do aluno"
+                    value={registration}
+                    onChange={e => setRegistration(e.target.value)}></input>
                 </FormInputs>
+                <BottomForm/>
             </FormStyle>
         </FormPageStyle>
     );
@@ -62,8 +72,5 @@ const SelectStyle = styled.select`
     height: 40px;
     width: 50%;
     border: 1px solid #E6E6F0;
-    &::-moz-selection{
-        background: #FFFFFF;
-    }
 `;
 

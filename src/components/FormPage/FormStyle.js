@@ -9,13 +9,16 @@ const FormStyle = styled.div`
     bottom: 0;
     position: relative;
     margin-top: -250px;
-    margin-bottom: -30px;
+    margin-bottom: 150px;
     h2{
         font-size: 20px;
         font-weight: bold;
         color: #000000;
         display: block;
         margin-bottom: 15px;
+    }
+    h4{
+        color: #000000;
     }
 
 `;
@@ -42,6 +45,12 @@ export const FormInputs = styled.div`
         width: 100%;
         margin-top: 12px;
         margin-bottom: 25px;
+        height: 56px;
+        background: #FAFAFC;
+        border: none;
+        padding-left: 10px;
+        border-radius: 9px;
+        border: 1px solid #E6E6F0;
     }
 `;
 
