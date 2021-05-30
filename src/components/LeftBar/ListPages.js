@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IoHomeOutline, IoMenuOutline } from "react-icons/io5";
+import { IoHomeOutline, IoMenuOutline, IoPieChartOutline, IoBagOutline } from "react-icons/io5";
 import { Link, useLocation } from 'react-router-dom';
 
 export default function ListPages(){
@@ -13,17 +13,12 @@ export default function ListPages(){
         },
         {
             name: "Lição",
-            icon: <IoHomeOutline color={'#757D8A'} size={'20px'}/>,
+            icon: <IoBagOutline color={'#757D8A'} size={'20px'}/>,
             link: "/licao"
         },
         {
-            name: "Seus dados",
-            icon: <IoHomeOutline color={'#757D8A'} size={'20px'}/>,
-            link: "/dados"
-        },
-        {
             name: "Estatísticas",
-            icon: <IoHomeOutline color={'#757D8A'} size={'20px'}/>,
+            icon: <IoPieChartOutline color={'#757D8A'} size={'20px'}/>,
             link: "/estatistica"
         }
     ]

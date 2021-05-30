@@ -14,7 +14,7 @@ export default function Header(props){
     )
 }
 
-const HeaderStyle = styled.div`
+export const HeaderStyle = styled.div`
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;

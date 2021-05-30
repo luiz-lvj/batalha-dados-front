@@ -3,12 +3,14 @@ import UserHeader from './UserHeader';
 import ListPages from './ListPages';
 import { Link } from 'react-router-dom';
 import { IoChatbubbleEllipsesOutline, IoLogInOutline } from "react-icons/io5";
+import logo from '../../assets/logo_small.png'
 
 
 export default function LeftBar(){
     return(
         <LeftStyle>
             <TopLeft>
+                <img alt="" src={logo}/>
                 <UserHeader/>
                 <ListPages/>
             </TopLeft>
@@ -27,7 +29,7 @@ export default function LeftBar(){
 }
 
 const LeftStyle = styled.div`
-    background: #F8F8F8;
+    background: #F4FFF9;
     width: 26%;
     display: flex;
     position: fixed;
@@ -55,6 +57,11 @@ const TopLeft = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    img{
+        height: 48px;
+        width: 178px;
+        margin-bottom: 20px;
+    }
 `;
 
 const BottomLeft = styled.div`

@@ -22,6 +22,7 @@ const UserStyle = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 80px;
     img{
         height: 64px;
         width: 64px;

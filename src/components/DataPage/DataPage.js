@@ -31,7 +31,7 @@ export default function DataPage(){
                         onChange={e => setEmail(e.target.value)}
                         ></BigInput>
                         {console.log(isEmailValid(email))}
-                        {!isEmailValid(email) && email != ""? 
+                        {!isEmailValid(email) && email !== ""? 
                         <WrongInput>Por favor digite um email válido</WrongInput>
                         : ''}
                         <p>Nome completo</p>
@@ -53,7 +53,6 @@ export default function DataPage(){
                     <img src={user.img}alt=""></img>
                     <div>
                         <h3>Qual seu sexo:</h3>
-                        
                         
                         <input type="radio" name="gender"></input><p>Masculino</p>
                         <input type="radio" name="gender"></input><p>Feminimo</p>
