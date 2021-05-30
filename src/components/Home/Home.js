@@ -1,9 +1,28 @@
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 import picture from '../../assets/img_home.png';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useContext } from 'react';
+import UserContext from '../contexts/UserContext';
 
 export default function Home(){
+    const { userPage, setUserPage } = useContext(UserContext);
+    const history = useHistory();
+    function setCoordinator(){
+        let user = {...userPage};
+        user.type = "coordinator";
+        setUserPage(user);
+    }
+    function setTeacher(){
+        let user = {...userPage};
+        user.type = "teacher";
+        setUserPage(user);
+    }
+    function setStudent(){
+        let user = {...userPage};
+        user.type = "student";
+        setUserPage(user);
+    }
     return(
         <HomeStyle>
             <Images>
@@ -11,9 +30,18 @@ export default function Home(){
                 <PictureStyle alt="" src={picture}/>
             </Images>
             <ButtonsLogin>
-                <ButtonUser back={'#9871F5'}>Sou Aluno</ButtonUser>
-                <ButtonUser back={'#04D361'}>Sou Coordenador</ButtonUser>
-                <ButtonUser back={'#6989FE'}>Sou Professor</ButtonUser>
+                <ButtonUser onClick={()=>{
+                    setStudent();
+                    history.push("/painel");
+                    }} back={'#9871F5'}>Sou Aluno</ButtonUser>
+                <ButtonUser onClick={()=>{
+                    setCoordinator();
+                    history.push("/painel");
+                    }} back={'#04D361'}>Sou Coordenador</ButtonUser>
+                <ButtonUser onClick={()=>{
+                    setTeacher();
+                    history.push("/painel");
+                    }} back={'#6989FE'}>Sou Professor</ButtonUser>
             </ButtonsLogin>
             
         </HomeStyle>

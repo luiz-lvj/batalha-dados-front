@@ -4,8 +4,10 @@ import { HeaderStyle, PageStyle } from '../utils/Header';
 import { IoArrowDownOutline, IoTrashOutline } from 'react-icons/io5';
 import { MdModeEdit } from 'react-icons/md'
 import ButtonStyle from './ButtonStyle';
+import { useHistory } from 'react-router';
 
 export default function CoordPanel(){
+    const history = useHistory();
     const students = [
         {
             name: "Aluno 1",
@@ -41,7 +43,7 @@ export default function CoordPanel(){
             <HeaderCoord>
                 <h2>Painel</h2>
                 <div>
-                    <ButtonStyle>Adicionar alunos</ButtonStyle>
+                    <ButtonStyle onClick={() => history.push("/novoestudante")}>Adicionar alunos</ButtonStyle>
                 </div>
             </HeaderCoord>
             <ContentPage>

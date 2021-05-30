@@ -7,7 +7,7 @@ export default function CardSubject(props){
     return(
         <CardStyle>
             <DeleteSubject>
-                <IoCloseCircleOutline size={'20px'}/>
+                <IoCloseCircleOutline size={'20px'} color={'#6081FC'}/>
             </DeleteSubject>
             <h2>{props.subject}</h2>
             <h3>{props.name}</h3>
@@ -34,7 +34,7 @@ const CardStyle = styled.li`
     p{
         display: block;
         max-height: 120px;
-        overflow-y: scroll;
+        overflow-y: hidden;
     }
     h3{
         font-size: 20px;
