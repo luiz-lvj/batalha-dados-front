@@ -40,6 +40,7 @@ const LeftStyle = styled.div`
     padding-bottom: 20px;
     padding-left: 15px;
     padding-right: 15px;
+    border-right: 1px solid #E1E3E6;
     p{
         color: #757D8A;
         line-height: 24px;
