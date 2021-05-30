@@ -47,7 +47,21 @@ export default function DataPage(){
                     </InputForm>
                 </LeftContent>
                 <RightContent>
-                    <h3>Perfil</h3>
+                    <div>
+                        <h3>Perfil</h3>
+                    </div>
+                    <img src={user.img}alt=""></img>
+                    <div>
+                        <h3>Qual seu sexo:</h3>
+                        
+                        
+                        <input type="radio" name="gender"></input><p>Masculino</p>
+                        <input type="radio" name="gender"></input><p>Feminimo</p>
+                        <br></br>
+                        <input type="radio" name="gender"></input><p>Não Binário</p>
+                        <input type="radio" name="gender"></input><p>Prefico não dizer</p>
+                        
+                    </div>
                 </RightContent>
             </ContentPage>
         </PageStyle>
@@ -91,6 +105,9 @@ const RightContent = styled.div`
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    max-width: 50%;
     h3{
         color: #404D61;
         display: block;
@@ -98,6 +115,23 @@ const RightContent = styled.div`
         margin-top: 24px;
         font-size: 16px;
         font-weight: bold;
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        border-radius: 150px;
+    }
+    div{
+        width: 100%;
+        text-align: left;
+        p{
+            display: inline;
+        }
+        input{
+            margin-left: 20px;
+            margin-bottom: 15px;
+            margin-right: 6px;
+        }
     }
 `;
 
