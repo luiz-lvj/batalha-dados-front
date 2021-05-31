@@ -43,14 +43,6 @@ export default function FormClass(){
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/c6fdZmTwhWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br/>
                     <br/>
-                    <p>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                    It has roots in a piece of classical Latin literature from 45 BC, 
-                    making it over 2000 years old. Richard McClintock, a Latin professor 
-                    at Hampden-Sydney College in Virginia, looked up one of the more obscure 
-                    Latin words, consectetur, from a Lorem Ipsum passage, and going through the 
-                    cites of the word in classical literature, discovered the undoubtable source.
-                    </p>
                     <br></br>
                     <br></br>
                     <p>Competências neste vídeo</p>
