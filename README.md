@@ -1,1 +1,5 @@
 Front End da Solução para a Batalha de Dados do Itaú! - Time Default
+
+REC.EDU é uma ferramenta para auxiliar a recuperação do aluno para reforços de conteúdos em horário extra classe. Diversos conteúdos, com destaque a vídeos, estarão disponíveis 24 horas e em tempo ilimitado para consumo dos alunos. Professores e coordenadores auxiliam a manutenção dos dados, informações registradas e feedbacks dos alunos e da ferramenta. A curadoria dos vídeos é feita em nível de instituições de ensino e ficam disponíveis para todos os usuários da plataforma (alunos de estados e cidades diferentes podem consumir os mesmos vídeos). Focando na faixa etária dos usuários, recompensas e gamificações são previstas para aumentar a adesão ao sistema, com identificação dos principais usuários, vídeos mais curtidos e membros mais assíduos.
+
+Nessa aplicação o aluno conseguirá assistir às videoaulas recomendadas e o professor conseguirá postar as aulas. Além disso, o coordenador consegue gerenciar alunos e professores.
