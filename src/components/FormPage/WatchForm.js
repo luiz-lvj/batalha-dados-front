@@ -36,8 +36,6 @@ export default function FormClass(){
         <FormPageStyle>
             <HeaderForm/>
             <FormStyle>
-                <h2>Chegou a hora de contribuir para a educação <br/>dos seus alunos (as)</h2>
-                <h4>Insira o Link e preencha todos os dados para informar melhor seus estudantes</h4>
                 <FormInputs>
                     <h3>O que é Ciência de Dados?</h3>
                     <Divider/>
