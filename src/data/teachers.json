@@ -1,0 +1,100 @@
+{
+    "teachers": [
+        {
+            "id": "1",
+            "name": "Luiz Vasconcelos",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "2",
+            "name": "Pedro",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "3",
+            "name": "Maria",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }
+        },
+        {
+            "id": "4",
+            "name": "Maria Eduarda",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "5",
+            "name": "Luiz Júnior",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"]
+            }   
+        },
+        {
+            "id": "6",
+            "name": "Luiz Vasconcelos",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "7",
+            "name": "Pedro",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "8",
+            "name": "Maria",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }
+        },
+        {
+            "id": "9",
+            "name": "Maria Eduarda",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "10",
+            "name": "Luiz Júnior",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"]
+            }   
+        },
+        {
+            "id": "11",
+            "name": "Maria Francisca",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "subjects": {
+                "Geografia": ["Relevo", "Geografia humana"]
+            }   
+        }
+    ]
+}

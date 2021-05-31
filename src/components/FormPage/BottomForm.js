@@ -2,18 +2,18 @@ import styled from "styled-components"
 import ButtonStyle from "../Panel/ButtonStyle";
 import { IoWarningOutline } from 'react-icons/io5';
 
-export default function BottomForm(){
+export default function BottomForm(props){
     return(
         <BottomStyle>
             <div>
                 <IoWarningOutline color={'#04D361'} size={'32px'}/>
                 <p>Importante!<br/>Preencha todos os dados</p>
             </div>
-            <ButtonStyle>Salvar Aluno</ButtonStyle>
+            <ButtonStyle>{props.message}</ButtonStyle>
         </BottomStyle>
     );
 }
-const BottomStyle = styled.div`
+export const BottomStyle = styled.div`
     height: 136px;
     background: #FAFAFC;
     padding: 50px;
@@ -27,8 +27,4 @@ const BottomStyle = styled.div`
             font-size: 14px;
         }
     }
-`;
-
-const WarningStyle = styled.div`
-
 `;

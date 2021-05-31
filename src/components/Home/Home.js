@@ -36,7 +36,7 @@ export default function Home(){
                     }} back={'#9871F5'}>Sou Aluno</ButtonUser>
                 <ButtonUser onClick={()=>{
                     setCoordinator();
-                    history.push("/painel");
+                    history.push("/painel_alunos");
                     }} back={'#04D361'}>Sou Coordenador</ButtonUser>
                 <ButtonUser onClick={()=>{
                     setTeacher();

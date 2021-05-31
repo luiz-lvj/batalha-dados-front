@@ -5,9 +5,11 @@ import LeftBar from './components/LeftBar/LeftBar';
 import DataPage from './components/DataPage/DataPage';
 import Panel from './components/Panel/Panel';
 import FormStudent from './components/FormPage/FormStudent';
+import FormTeacher from './components/FormPage/FormTeacher';
 import UserContext from './components/contexts/UserContext';
 import { useState } from 'react';
-import SubjectsContext, { subjects } from './components/contexts/SubjectsContext';
+import DataContext, { dataUsable }  from './components/contexts/DataContext';
+import CoordPanelTeachers from './components/Panel/CoordPanelTeachers';
 
 function App() {
   const user = {
@@ -17,11 +19,10 @@ function App() {
     img: "https://maisbolsas.files.wordpress.com/2016/04/12.jpg?w=663",
     type: ""
   }
-
   const [userPage, setUserPage] = useState(user);
   return (
     <UserContext.Provider value={{ userPage, setUserPage }}>
-      <SubjectsContext.Provider value={{subjects}}>
+      <DataContext.Provider value={{...dataUsable}}>
         <BrowserRouter>
           <GlobalStyle/>
           <Switch>
@@ -29,7 +30,7 @@ function App() {
               <Home/>
             </Route>
             
-            <Route path="/painel" exact>
+            <Route path="/painel_alunos" exact>
               <LeftBar/>
               <Panel/>
             </Route>
@@ -37,18 +38,23 @@ function App() {
               <LeftBar/>
               <DataPage/>
             </Route>
-            <Route path="/licao" exact>
+            <Route path="/painel_professores" exact>
               <LeftBar/>
+              <CoordPanelTeachers/>
             </Route>
-            <Route path="/estatistica" exact>
-              <LeftBar/>
+            <Route path="/novoprofessor" exact>
+              <FormTeacher/>
             </Route>
             <Route path="/novoestudante" exact>
-              <FormStudent type="create_student"/>
+              <FormStudent/>
+            </Route>
+            <Route path="/painel" exact>
+              <LeftBar/>
+              <Panel/>
             </Route>
           </Switch>
         </BrowserRouter>
-      </SubjectsContext.Provider>
+      </DataContext.Provider>
     </UserContext.Provider>
   );
 }

@@ -7,20 +7,15 @@ export default function ListPages(){
 
     const pages = [
         {
-            name: "Painel",
+            name: "Painel Alunos",
             icon: <IoHomeOutline color={'#757D8A'} size={'20px'}/>,
-            link: "/painel"
+            link: "/painel_alunos"
         },
         {
-            name: "Lição",
+            name: "Painel Professores",
             icon: <IoBagOutline color={'#757D8A'} size={'20px'}/>,
-            link: "/licao"
+            link: "/painel_professores"
         },
-        {
-            name: "Estatísticas",
-            icon: <IoPieChartOutline color={'#757D8A'} size={'20px'}/>,
-            link: "/estatistica"
-        }
     ]
     return(
         <ListStyle>

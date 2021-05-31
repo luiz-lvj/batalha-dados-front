@@ -1,0 +1,122 @@
+{
+    "students": [
+        {
+            "id": "1",
+            "name": "Luiz Vasconcelos",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 1",
+            "level": "8º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "2",
+            "name": "Pedro",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 1",
+            "level": "2º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "3",
+            "name": "Maria",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 2",
+            "level": "7º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }
+        },
+        {
+            "id": "4",
+            "name": "Maria Eduarda",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 4",
+            "level": "6º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "5",
+            "name": "Luiz Júnior",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 5",
+            "level": "3º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"]
+            }   
+        },
+        {
+            "id": "6",
+            "name": "Luiz Vasconcelos",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 6",
+            "level": "8º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "7",
+            "name": "Pedro",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 1",
+            "level": "8º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "8",
+            "name": "Maria",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 3",
+            "level": "1º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }
+        },
+        {
+            "id": "9",
+            "name": "Maria Eduarda",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Municipal 2",
+            "level": "6º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"],
+                "Português": ["Orações", "Verbos", "Substantivos"]
+            }   
+        },
+        {
+            "id": "10",
+            "name": "Luiz Júnior",
+            "school": "Escola Estadual 1",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "level": "5º Série",
+            "subjects": {
+                "Matemática": ["Equações", "Porcentagem", "Equações segundo grau"]
+            }   
+        },
+        {
+            "id": "11",
+            "name": "Maria Francisca",
+            "img": "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png",
+            "school": "Escola Estadual 1",
+            "level": "6º Série",
+            "subjects": {
+                "Geografia": ["Relevo", "Geografia humana"]
+            }   
+        }
+    ]
+}

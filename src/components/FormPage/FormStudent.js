@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import HeaderForm from './HeaderForm';
 import FormStyle, { FormInputs, Divider } from './FormStyle';
 import { useContext, useState } from 'react';
-import SubjectsContext from '../contexts/SubjectsContext';
+import SubjectsContext from '../contexts/DataContext';
 import BottomForm from './BottomForm';
 
 export default function FormStudent(){
@@ -41,7 +41,7 @@ export default function FormStudent(){
                     value={registration}
                     onChange={e => setRegistration(e.target.value)}></input>
                 </FormInputs>
-                <BottomForm/>
+                <BottomForm message={'Salvar Aluno'}/>
             </FormStyle>
         </FormPageStyle>
     );

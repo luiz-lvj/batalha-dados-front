@@ -8,51 +8,45 @@ import { useHistory } from 'react-router';
 import { useContext } from 'react';
 import DataContext from '../contexts/DataContext';
 
-export default function CoordPanel(){
+export default function CoordPanelTeachers(){
     const history = useHistory();
-    const {students} = useContext(DataContext);
+    const {teachers} = useContext(DataContext);
     return(
         <PageStyle>
             <HeaderCoord>
-                <h2>Painel Alunos</h2>
+                <h2>Painel Professores</h2>
                 <div>
-                    <ButtonStyle onClick={() => history.push("/novoestudante")}>Adicionar alunos</ButtonStyle>
+                    <ButtonStyle onClick={() => history.push("/novoprofessor")}>Adicionar Professores</ButtonStyle>
                 </div>
             </HeaderCoord>
             <ContentPage>
-                <h2>Alunos</h2>
-                <p>{students.length} alunos cadastrados</p>
-                <TableStudents>
+                <h2>Professores</h2>
+                <p>{teachers.length} alunos cadastrados</p>
+                <TableTeachers>
                     <tr>
                         <th>Nome <IoArrowDownOutline size={'20px'}/></th>
-                        <th>Escola <IoArrowDownOutline size={'20px'}/></th>
-                        <th>Série <IoArrowDownOutline size={'20px'}/></th>
-                        <th>Matéria <IoArrowDownOutline size={'20px'}/></th>
+                        <th>Competências Ministradas <IoArrowDownOutline size={'20px'}/></th>
                         <th></th>
                     </tr>
-                    {students.map((student)=>{
+                    {teachers.map((teacher)=>{
                         return(
-                            <StudentLine
-                            img={student.img}
-                            name={student.name}
-                            school={student.school}
-                            series={student.level}
-                            subjects={student.subjects}
+                            <TeacherLine
+                            img={teacher.img}
+                            name={teacher.name}
+                            subjects={teacher.subjects}
                             />
                         );
                     })}
-                </TableStudents>
+                </TableTeachers>
             </ContentPage>
         </PageStyle>
     );
 }
 
-function StudentLine(props){
+function TeacherLine(props){
     return(
         <tr>
             <td> <img alt="" src={props.img}/> <p>{props.name}</p></td>
-            <td>{props.school}</td>
-            <td>{props.series}</td>
             <td>
                 {Object.keys(props.subjects).map((subject)=>{
                     return subject + ', ';
@@ -67,7 +61,7 @@ function StudentLine(props){
     );
 }
 
-const TableStudents = styled.table`
+const TableTeachers = styled.table`
     margin-top: 40px;
     width: 100%;
     display: flex;
@@ -88,7 +82,7 @@ const TableStudents = styled.table`
         th, td{
             display: flex;
             align-items: center;
-            width: 23%;
+            width: 40%;
             overflow: hidden;
             text-overflow: ellipsis;
             padding: 5px;
