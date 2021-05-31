@@ -80,3 +80,4 @@ const SelectStyle = styled.select`
     width: 50%;
     border: 1px solid #E6E6F0;
 `;
+

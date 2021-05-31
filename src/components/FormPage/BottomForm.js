@@ -19,6 +19,9 @@ export default function BottomForm(props){
                 if(props.click){
                     history.push(props.click);
                 }
+                if(props.setSend){
+                    props.setSend(true);
+                }
             }}>{props.message}</ButtonStyle>
         </BottomStyle>
     );

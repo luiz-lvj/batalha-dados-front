@@ -3,7 +3,6 @@ import HeaderForm from './HeaderForm';
 import FormStyle, { FormInputs, Divider } from './FormStyle';
 import { useContext, useState } from 'react';
 import BottomForm from './BottomForm';
-import UserContext from '../contexts/UserContext';
 import DataContext from '../contexts/DataContext';
 import { AddSkill, SmallInput } from './FormTeacher';
 import ListSkills from '../utils/Skill';

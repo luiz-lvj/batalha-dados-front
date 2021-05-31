@@ -11,6 +11,9 @@ import { useState } from 'react';
 import DataContext, { dataUsable }  from './components/contexts/DataContext';
 import CoordPanelTeachers from './components/Panel/CoordPanelTeachers';
 import FormStudentSkills from './components/FormPage/FormStudentSkills';
+import FormClass from './components/FormPage/FormClass';
+import ClassContext from './components/contexts/ClassContext';
+import WatchForm from './components/FormPage/WatchForm';
 
 function App() {
   const user = {
@@ -21,43 +24,52 @@ function App() {
     type: ""
   }
   const [userPage, setUserPage] = useState(user);
+  const [classPage, setClassPage] = useState({});
   return (
     <UserContext.Provider value={{ userPage, setUserPage }}>
       <DataContext.Provider value={{...dataUsable}}>
-        <BrowserRouter>
-          <GlobalStyle/>
-          <Switch>
-            <Route path="/" exact>
-              <Home/>
-            </Route>
-            
-            <Route path="/painel_alunos" exact>
-              <LeftBar/>
-              <Panel/>
-            </Route>
-            <Route path="/dados" exact>
-              <LeftBar/>
-              <DataPage/>
-            </Route>
-            <Route path="/painel_professores" exact>
-              <LeftBar/>
-              <CoordPanelTeachers/>
-            </Route>
-            <Route path="/novoprofessor" exact>
-              <FormTeacher/>
-            </Route>
-            <Route path="/novoestudante" exact>
-              <FormStudent/>
-            </Route>
-            <Route path="/painel" exact>
-              <LeftBar/>
-              <Panel/>
-            </Route>
-            <Route path="/addcompetencias" exact>
-              <FormStudentSkills/>
-            </Route>
-          </Switch>
-        </BrowserRouter>
+        <ClassContext.Provider value={{ classPage, setClassPage }}>
+          <BrowserRouter>
+            <GlobalStyle/>
+            <Switch>
+              <Route path="/" exact>
+                <Home/>
+              </Route>
+              
+              <Route path="/painel_alunos" exact>
+                <LeftBar/>
+                <Panel/>
+              </Route>
+              <Route path="/dados" exact>
+                <LeftBar/>
+                <DataPage/>
+              </Route>
+              <Route path="/painel_professores" exact>
+                <LeftBar/>
+                <CoordPanelTeachers/>
+              </Route>
+              <Route path="/novoprofessor" exact>
+                <FormTeacher/>
+              </Route>
+              <Route path="/novoestudante" exact>
+                <FormStudent/>
+              </Route>
+              <Route path="/painel" exact>
+                <LeftBar/>
+                <Panel/>
+              </Route>
+              <Route path="/addcompetencias" exact>
+                <FormStudentSkills/>
+              </Route>
+              <Route path="/addaula" exact>
+                <FormClass/>
+              </Route>
+              <Route path="/assistiraula" exact>
+                <WatchForm/>
+              </Route>
+            </Switch>
+          </BrowserRouter>
+        </ClassContext.Provider>
       </DataContext.Provider>
     </UserContext.Provider>
   );
