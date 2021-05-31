@@ -3,31 +3,17 @@ import HeaderForm from './HeaderForm';
 import FormStyle, { FormInputs, Divider } from './FormStyle';
 import { useContext, useState } from 'react';
 import BottomForm from './BottomForm';
-import {FormPageStyle} from './FormStudent';
+import UserContext from '../contexts/UserContext';
 import DataContext from '../contexts/DataContext';
+import { AddSkill, SmallInput } from './FormTeacher';
 import ListSkills from '../utils/Skill';
-import { useHistory } from 'react-router';
 
-export default function FormTeacher(){
-    const history = useHistory();
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+export default function FormStudentSkills(){
+    const [year, setYear] = useState("");
+    const [semester, setSemester] = useState("");
     const [skills, setSkills] = useState([]);
     const [subject, setSubject] = useState("");
     const [skillInput, setSkillInput] = useState("");
-
-    const teacher = {
-        name: name,
-        email: email,
-        subject: subject,
-        skills: skills
-    }
-    function sendTeacher(){
-        const filename = "../../data/sent/teacher";
-        const file = require(filename);
-        const data = JSON.stringify(teacher);
-        file.writeFile(filename, data);
-    }
 
     function addSkills(){
         if(skillInput === ""){
@@ -37,37 +23,32 @@ export default function FormTeacher(){
         setSkills(newSkills);
         setSkillInput("");
     }
+
     return(
         <FormPageStyle>
             <HeaderForm/>
             <FormStyle>
-                <h2>Você está prestes a cadastrar um professor</h2>
+                <h2>Você está prestes a cadastrar um aluno</h2>
                 <h4>O primeiro passo é preencher o formulário de inscrição</h4>
                 <FormInputs>
-                    <h3>Dados do professor</h3>
+                    <h3>Quais disciplinas você deseja cadastrar seu aluno</h3>
                     <Divider/>
-                    <p>Nome completo do professor</p>
-                    <input type="text" placeholder="Digite o nome do professor"
-                    value={name}
-                    onChange={e => setName(e.target.value)}
-                    ></input>
+                    <p>Selecione o ano do aluno.</p>
+                    <SelectYear setYear={setYear}/>
+                    <p>Selecione o semestre do aluno.</p>
+                    <SelectSemester setSemester={setSemester}/>
 
-                    <p>Email do professor</p>
-                    <input type="email" placeholder="Digite o email do professor"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}></input>
-
-                    <p>Selecione a Disciplina do professor</p>
+                    <p>Selecione a matéria de dificuldade do aluno.</p>
                     <SelectSubject setSubject={setSubject}/>
-
-                    <p>Insira as Competências que ele Ensina</p>
+                    <br></br>
+                    <p>Insira as Competências que ele tem dificuldade</p>
                     <SmallInput type="text" placeholder="digite as competências"
                     value={skillInput}
                     onChange={e => setSkillInput(e.target.value)}
                     ></SmallInput> <AddSkill onClick={()=>addSkills()}>+</AddSkill>
                     <ListSkills skills={skills}/>
                 </FormInputs>
-                <BottomForm sendFunc={sendTeacher} sendData={teacher} click={'/'} message={'Salvar Professor'}/>
+                <BottomForm click={'/'} message={'Salvar Aluno'}/>
             </FormStyle>
         </FormPageStyle>
     );
@@ -85,6 +66,37 @@ function SelectSubject(props){
         </SelectStyle>
     );
 }
+
+function SelectYear(props){
+    const years = [2014, 2015, 2016, 2017, 2018, 2018, 2020];
+    return(
+        <SmallSelection id="years" name="years" onChange={e => props.setYear(e.target.value)}>
+            {years.map((year, idx)=>{
+                return(
+                    <option key={idx} value={year}>{year}</option>
+                );
+            })}
+        </SmallSelection>
+    );
+}
+function SelectSemester(props){
+    const years = [1,2];
+    return(
+        <SmallSelection id="semesters" name="semesters" onChange={e => props.setSemester(e.target.value)}>
+            {years.map((semester, idx)=>{
+                return(
+                    <option key={idx} value={semester}>{semester}</option>
+                );
+            })}
+        </SmallSelection>
+    );
+}
+
+export const FormPageStyle = styled.div`
+    overflow-y: scroll;
+    z-index: 0;
+`;
+
 const SelectStyle = styled.select`
     border: none;
     background: #FFFFFF;
@@ -92,27 +104,15 @@ const SelectStyle = styled.select`
     height: 40px;
     width: 50%;
     border: 1px solid #E6E6F0;
+    margin-top: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+`;
+
+const SmallSelection = styled(SelectStyle)`
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-bottom: 40px;
 `;
 
-export const SmallInput = styled.input`
-    width: 70% !important;
-    margin-right: 30px;
-`;
-
-export const AddSkill = styled.button`
-    color: #FFFFFF;
-    background: rgba(7, 162, 135, 0.5);
-    height: 45px;
-    width: 45px;
-    font-weight: bolder;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    display: inline;
-    border-radius: 45px;
-`;
 

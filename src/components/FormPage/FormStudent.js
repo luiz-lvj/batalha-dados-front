@@ -11,6 +11,13 @@ export default function FormStudent(){
     const [level, setLevel] = useState("");
     const [registration, setRegistration] = useState("");
 
+    const student = {
+        name: name,
+        email: email,
+        level: level,
+        registration: registration
+    }
+
     return(
         <FormPageStyle>
             <HeaderForm/>
@@ -41,7 +48,7 @@ export default function FormStudent(){
                     value={registration}
                     onChange={e => setRegistration(e.target.value)}></input>
                 </FormInputs>
-                <BottomForm message={'Salvar Aluno'}/>
+                <BottomForm click={'/addcompetencias'}message={'Salvar Aluno'}/>
             </FormStyle>
         </FormPageStyle>
     );
@@ -73,4 +80,3 @@ const SelectStyle = styled.select`
     width: 50%;
     border: 1px solid #E6E6F0;
 `;
-

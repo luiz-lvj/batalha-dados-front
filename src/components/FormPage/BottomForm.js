@@ -1,15 +1,25 @@
 import styled from "styled-components"
 import ButtonStyle from "../Panel/ButtonStyle";
 import { IoWarningOutline } from 'react-icons/io5';
+import { useHistory } from "react-router";
 
 export default function BottomForm(props){
+    const history = useHistory();
     return(
         <BottomStyle>
             <div>
                 <IoWarningOutline color={'#04D361'} size={'32px'}/>
                 <p>Importante!<br/>Preencha todos os dados</p>
             </div>
-            <ButtonStyle>{props.message}</ButtonStyle>
+            <ButtonStyle onClick={()=>{
+
+                /*if(props.sendFunc){
+                    props.sendFunc(props.sendData);
+                }*/
+                if(props.click){
+                    history.push(props.click);
+                }
+            }}>{props.message}</ButtonStyle>
         </BottomStyle>
     );
 }

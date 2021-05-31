@@ -10,6 +10,7 @@ import UserContext from './components/contexts/UserContext';
 import { useState } from 'react';
 import DataContext, { dataUsable }  from './components/contexts/DataContext';
 import CoordPanelTeachers from './components/Panel/CoordPanelTeachers';
+import FormStudentSkills from './components/FormPage/FormStudentSkills';
 
 function App() {
   const user = {
@@ -51,6 +52,9 @@ function App() {
             <Route path="/painel" exact>
               <LeftBar/>
               <Panel/>
+            </Route>
+            <Route path="/addcompetencias" exact>
+              <FormStudentSkills/>
             </Route>
           </Switch>
         </BrowserRouter>
